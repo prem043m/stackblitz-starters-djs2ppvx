@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.843" tests="21" failures="11">
+  <testsuite name="Root Suite" timestamp="2026-11-26T07:32:08" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Tickets controller" timestamp="2026-11-26T07:32:08" tests="7" file="/home/projects/stackblitz-starters-k8wdpytc/test/test.js" time="0.013" failures="0">
+    <testcase name="Tickets controller create() should return a ticket with defaults" time="0.001" classname="create() should return a ticket with defaults">
+    </testcase>
+    <testcase name="Tickets controller create() should assign incrementing IDs and store tickets" time="0.000" classname="create() should assign incrementing IDs and store tickets">
+    </testcase>
+    <testcase name="Tickets controller create() should return null for an empty or non-string title" time="0.000" classname="create() should return null for an empty or non-string title">
+    </testcase>
+    <testcase name="Tickets controller create() should return null for an invalid priority" time="0.000" classname="create() should return null for an invalid priority">
+    </testcase>
+    <testcase name="Tickets controller get() should find a ticket by numeric or string ID" time="0.000" classname="get() should find a ticket by numeric or string ID">
+    </testcase>
+    <testcase name="Tickets controller updateStatus() should distinguish not found from invalid" time="0.001" classname="updateStatus() should distinguish not found from invalid">
+    </testcase>
+    <testcase name="Tickets controller remove() should delete a ticket and not reuse its ID" time="0.000" classname="remove() should delete a ticket and not reuse its ID">
+    </testcase>
+  </testsuite>
+  <testsuite name="POST /tickets" timestamp="2026-11-26T07:32:08" tests="4" file="/home/projects/stackblitz-starters-k8wdpytc/test/test.js" time="0.544" failures="4">
+    <testcase name="POST /tickets should create a new ticket with default priority" time="0.442" classname="should create a new ticket with default priority">
+      <failure message="expected 201 &quot;Created&quot;, got 404 &quot;Not Found&quot;" type="Error"><![CDATA[Error: expected 201 "Created", got 404 "Not Found"
+    at Context.eval (test/test.js:71:14)
+    at <anonymous> (node:internal/timers:299:6973)
+----
+    at Test._assertStatus (node_modules/supertest/lib/test.js:252:14)
+    at eval (node_modules/supertest/lib/test.js:308:13)
+    at Test._assertFunction (node_modules/supertest/lib/test.js:285:13)
+    at Test.assert (node_modules/supertest/lib/test.js:164:23)
+    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)
+    at Server.wrapper (node:events:30:8084)
+    at Server.emit (node:events:30:11192)
+    at emitCloseNT (node:net:344:18321)
+    at processTicksAndRejections (node:internal/process/task_queues:219:1136)
+    at Array.forEach (<anonymous>)
+    at Map.forEach (<anonymous>)]]></failure>
+    </testcase>
+    <testcase name="POST /tickets should create a ticket with a given priority and a unique ID" time="0.035" classname="should create a ticket with a given priority and a unique ID">
+      <failure message="expected 201 &quot;Created&quot;, got 404 &quot;Not Found&quot;" type="Error"><![CDATA[Error: expected 201 "Created", got 404 "Not Found"
+    at Context.eval (test/test.js:87:14)
+    at <anonymous> (node:internal/timers:299:6973)
+----
+    at Test._assertStatus (node_modules/supertest/lib/test.js:252:14)
+    at eval (node_modules/supertest/lib/test.js:308:13)
+    at Test._assertFunction (node_modules/supertest/lib/test.js:285:13)
+    at Test.assert (node_modules/supertest/lib/test.js:164:23)
+    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)
+    at Server.wrapper (node:events:30:8084)
+    at Server.emit (node:events:30:11192)
+    at emitCloseNT (node:net:344:18321)
+    at processTicksAndRejections (node:internal/process/task_queues:219:1136)
+    at Array.forEach (<anonymous>)
+    at Map.forEach (<anonymous>)]]></failure>
+    </testcase>
+    <testcase name="POST /tickets should reject a missing title" time="0.024" classname="should reject a missing title">
+      <failure message="expected 400 &quot;Bad Request&quot;, got 404 &quot;Not Found&quot;" type="Error"><![CDATA[Error: expected 400 "Bad Request", got 404 "Not Found"
+    at Context.eval (test/test.js:101:14)
+    at <anonymous> (node:internal/timers:299:6973)
+----
+    at Test._assertStatus (node_modules/supertest/lib/test.js:252:14)
+    at eval (node_modules/supertest/lib/test.js:308:13)
+    at Test._assertFunction (node_modules/supertest/lib/test.js:285:13)
+    at Test.assert (node_modules/supertest/lib/test.js:164:23)
+    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)
+    at Server.wrapper (node:events:30:8084)
+    at Server.emit (node:events:30:11192)
+    at emitCloseNT (node:net:344:18321)
+    at processTicksAndRejections (node:internal/process/task_queues:219:1136)
+    at Array.forEach (<anonymous>)
+    at Map.forEach (<anonymous>)]]></failure>
+    </testcase>
+    <testcase name="POST /tickets should reject an invalid priority" time="0.029" classname="should reject an invalid priority">
+      <failure message="expected 400 &quot;Bad Request&quot;, got 404 &quot;Not Found&quot;" type="Error"><![CDATA[Error: expected 400 "Bad Request", got 404 "Not Found"
+    at Context.eval (test/test.js:108:14)
+    at <anonymous> (node:internal/timers:299:6973)
+----
+    at Test._assertStatus (node_modules/supertest/lib/test.js:252:14)
+    at eval (node_modules/supertest/lib/test.js:308:13)
+    at Test._assertFunction (node_modules/supertest/lib/test.js:285:13)
+    at Test.assert (node_modules/supertest/lib/test.js:164:23)
+    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)
+    at Server.wrapper (node:events:30:8084)
+    at Server.emit (node:events:30:11192)
+    at emitCloseNT (node:net:344:18321)
+    at processTicksAndRejections (node:internal/process/task_queues:219:1136)
+    at Array.forEach (<anonymous>)
+    at Map.forEach (<anonymous>)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="GET /tickets" timestamp="2026-11-26T07:32:08" tests="3" file="/home/projects/stackblitz-starters-k8wdpytc/test/test.js" time="0.080" failures="3">
+    <testcase name="GET /tickets should return all tickets" time="0.022" classname="should return all tickets">
+      <failure message="expected 200 &quot;OK&quot;, got 404 &quot;Not Found&quot;" type="Error"><![CDATA[Error: expected 200 "OK", got 404 "Not Found"
+    at Context.eval (test/test.js:116:14)
+    at <anonymous> (node:internal/timers:299:6973)
+----
+    at Test._assertStatus (node_modules/supertest/lib/test.js:252:14)
+    at eval (node_modules/supertest/lib/test.js:308:13)
+    at Test._assertFunction (node_modules/supertest/lib/test.js:285:13)
+    at Test.assert (node_modules/supertest/lib/test.js:164:23)
+    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)
+    at Server.wrapper (node:events:30:8084)
+    at Server.emit (node:events:30:11192)
+    at emitCloseNT (node:net:344:18321)
+    at processTicksAndRejections (node:internal/process/task_queues:219:1136)
+    at Array.forEach (<anonymous>)
+    at Map.forEach (<anonymous>)]]></failure>
+    </testcase>
+    <testcase name="GET /tickets should filter tickets by status" time="0.029" classname="should filter tickets by status">
+      <failure message="expected 200 &quot;OK&quot;, got 404 &quot;Not Found&quot;" type="Error"><![CDATA[Error: expected 200 "OK", got 404 "Not Found"
+    at Context.eval (test/test.js:131:14)
+    at <anonymous> (node:internal/timers:299:6973)
+----
+    at Test._assertStatus (node_modules/supertest/lib/test.js:252:14)
+    at eval (node_modules/supertest/lib/test.js:308:13)
+    at Test._assertFunction (node_modules/supertest/lib/test.js:285:13)
+    at Test.assert (node_modules/supertest/lib/test.js:164:23)
+    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)
+    at Server.wrapper (node:events:30:8084)
+    at Server.emit (node:events:30:11192)
+    at emitCloseNT (node:net:344:18321)
+    at processTicksAndRejections (node:internal/process/task_queues:219:1136)
+    at Array.forEach (<anonymous>)
+    at Map.forEach (<anonymous>)]]></failure>
+    </testcase>
+    <testcase name="GET /tickets should reject an invalid status filter" time="0.016" classname="should reject an invalid status filter">
+      <failure message="expected 400 &quot;Bad Request&quot;, got 404 &quot;Not Found&quot;" type="Error"><![CDATA[Error: expected 400 "Bad Request", got 404 "Not Found"
+    at Context.eval (test/test.js:152:14)
+    at <anonymous> (node:internal/timers:299:6973)
+----
+    at Test._assertStatus (node_modules/supertest/lib/test.js:252:14)
+    at eval (node_modules/supertest/lib/test.js:308:13)
+    at Test._assertFunction (node_modules/supertest/lib/test.js:285:13)
+    at Test.assert (node_modules/supertest/lib/test.js:164:23)
+    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)
+    at Server.wrapper (node:events:30:8084)
+    at Server.emit (node:events:30:11192)
+    at emitCloseNT (node:net:344:18321)
+    at processTicksAndRejections (node:internal/process/task_queues:219:1136)
+    at Array.forEach (<anonymous>)
+    at Map.forEach (<anonymous>)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="GET /tickets/:id" timestamp="2026-11-26T07:32:08" tests="2" file="/home/projects/stackblitz-starters-k8wdpytc/test/test.js" time="0.076" failures="1">
+    <testcase name="GET /tickets/:id should return an existing ticket" time="0.021" classname="should return an existing ticket">
+      <failure message="expected 200 &quot;OK&quot;, got 404 &quot;Not Found&quot;" type="Error"><![CDATA[Error: expected 200 "OK", got 404 "Not Found"
+    at Context.eval (test/test.js:160:14)
+    at <anonymous> (node:internal/timers:299:6973)
+----
+    at Test._assertStatus (node_modules/supertest/lib/test.js:252:14)
+    at eval (node_modules/supertest/lib/test.js:308:13)
+    at Test._assertFunction (node_modules/supertest/lib/test.js:285:13)
+    at Test.assert (node_modules/supertest/lib/test.js:164:23)
+    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)
+    at Server.wrapper (node:events:30:8084)
+    at Server.emit (node:events:30:11192)
+    at emitCloseNT (node:net:344:18321)
+    at processTicksAndRejections (node:internal/process/task_queues:219:1136)
+    at Array.forEach (<anonymous>)
+    at Map.forEach (<anonymous>)]]></failure>
+    </testcase>
+    <testcase name="GET /tickets/:id should return 404 for an unknown ticket" time="0.022" classname="should return 404 for an unknown ticket">
+    </testcase>
+  </testsuite>
+  <testsuite name="PUT /tickets/:id" timestamp="2026-11-26T07:32:08" tests="3" file="/home/projects/stackblitz-starters-k8wdpytc/test/test.js" time="0.070" failures="2">
+    <testcase name="PUT /tickets/:id should update the status of an existing ticket" time="0.025" classname="should update the status of an existing ticket">
+      <failure message="expected 200 &quot;OK&quot;, got 404 &quot;Not Found&quot;" type="Error"><![CDATA[Error: expected 200 "OK", got 404 "Not Found"
+    at Context.eval (test/test.js:182:14)
+    at <anonymous> (node:internal/timers:299:6973)
+----
+    at Test._assertStatus (node_modules/supertest/lib/test.js:252:14)
+    at eval (node_modules/supertest/lib/test.js:308:13)
+    at Test._assertFunction (node_modules/supertest/lib/test.js:285:13)
+    at Test.assert (node_modules/supertest/lib/test.js:164:23)
+    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)
+    at Server.wrapper (node:events:30:8084)
+    at Server.emit (node:events:30:11192)
+    at emitCloseNT (node:net:344:18321)
+    at processTicksAndRejections (node:internal/process/task_queues:219:1136)
+    at Array.forEach (<anonymous>)
+    at Map.forEach (<anonymous>)]]></failure>
+    </testcase>
+    <testcase name="PUT /tickets/:id should reject an invalid status" time="0.022" classname="should reject an invalid status">
+      <failure message="expected 400 &quot;Bad Request&quot;, got 404 &quot;Not Found&quot;" type="Error"><![CDATA[Error: expected 400 "Bad Request", got 404 "Not Found"
+    at Context.eval (test/test.js:197:14)
+    at <anonymous> (node:internal/timers:299:6973)
+----
+    at Test._assertStatus (node_modules/supertest/lib/test.js:252:14)
+    at eval (node_modules/supertest/lib/test.js:308:13)
+    at Test._assertFunction (node_modules/supertest/lib/test.js:285:13)
+    at Test.assert (node_modules/supertest/lib/test.js:164:23)
+    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)
+    at Server.wrapper (node:events:30:8084)
+    at Server.emit (node:events:30:11192)
+    at emitCloseNT (node:net:344:18321)
+    at processTicksAndRejections (node:internal/process/task_queues:219:1136)
+    at Array.forEach (<anonymous>)
+    at Map.forEach (<anonymous>)]]></failure>
+    </testcase>
+    <testcase name="PUT /tickets/:id should return 404 for an unknown ticket" time="0.020" classname="should return 404 for an unknown ticket">
+    </testcase>
+  </testsuite>
+  <testsuite name="DELETE /tickets/:id" timestamp="2026-11-26T07:32:08" tests="2" file="/home/projects/stackblitz-starters-k8wdpytc/test/test.js" time="0.052" failures="1">
+    <testcase name="DELETE /tickets/:id should delete an existing ticket" time="0.029" classname="should delete an existing ticket">
+      <failure message="expected 204 &quot;No Content&quot;, got 404 &quot;Not Found&quot;" type="Error"><![CDATA[Error: expected 204 "No Content", got 404 "Not Found"
+    at Context.eval (test/test.js:212:14)
+    at <anonymous> (node:internal/timers:299:6973)
+----
+    at Test._assertStatus (node_modules/supertest/lib/test.js:252:14)
+    at eval (node_modules/supertest/lib/test.js:308:13)
+    at Test._assertFunction (node_modules/supertest/lib/test.js:285:13)
+    at Test.assert (node_modules/supertest/lib/test.js:164:23)
+    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)
+    at Server.wrapper (node:events:30:8084)
+    at Server.emit (node:events:30:11192)
+    at emitCloseNT (node:net:344:18321)
+    at processTicksAndRejections (node:internal/process/task_queues:219:1136)
+    at Array.forEach (<anonymous>)
+    at Map.forEach (<anonymous>)]]></failure>
+    </testcase>
+    <testcase name="DELETE /tickets/:id should return 404 when deleting an unknown ticket" time="0.018" classname="should return 404 when deleting an unknown ticket">
+    </testcase>
+  </testsuite>
+</testsuites>
